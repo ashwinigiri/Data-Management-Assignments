@@ -1,0 +1,1 @@
+select count(h.customer_id) 'Number_of_Customers' from horror_view h where h.customer_id not in (select c.customer_id from comedy_view c);

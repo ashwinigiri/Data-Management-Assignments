@@ -1,0 +1,1 @@
+select f.title,f.release_year,c.name from film f,film_category fm,category c where f.film_id = fm.film_id and fm.category_id = c.category_id order by f.release_year;

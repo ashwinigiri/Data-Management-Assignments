@@ -1,0 +1,1 @@
+select c.name from film_category fm,category c where fm.category_id = c.category_id group by c.name order by count(*) limit 1;

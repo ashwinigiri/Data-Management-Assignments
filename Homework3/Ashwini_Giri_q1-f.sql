@@ -1,0 +1,1 @@
+select count(*) 'Number_of_Customers' from customer cu where cu.active=0 and cu.customer_id in (select r.customer_id from rental r where r.inventory_id in (select i.inventory_id from inventory i where i.film_id in (select fm.film_id from film_category fm,category c where fm.category_id = c.category_id and c.name = 'Comedy')));
